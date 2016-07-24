@@ -62,20 +62,20 @@ else
  npm config set prefix '~/.npm-global'
  echo "export PATH=~/.npm-global/bin:$PATH" >> ~/.profile
  echo "source ~/.profile" >> ~/.bashrc
+ source ~/.bashrc
 fi
 
 echo 'export NODE_PATH="'$(npm root -g)'"' >> ~/.bashrc 
+
+echo "Post installation done!... "
+
+echo "Installing Generator Angular... "
+npm install -g grunt-cli bower yo generator-karma generator-angular
+
+echo "==> Execution status: $?"
 
 echo "Modifying Permissions... "
 mkdir ~/.config
 mkdir ~/.cache
 mkdir ~/.local
 chmod -R g+rw ~/.config ~/.cache ~/.local ~/.npm ~/.npm-global
-
-
-echo "Post installation done!... "
-
-echo "Installing Generator Angular... "
-#npm install -g grunt-cli bower yo generator-karma generator-angular
-
-echo "==> Execution status: $?"
