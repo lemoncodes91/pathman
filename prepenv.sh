@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 echo "Preparing Environment!..."
 
 echo "Installing bzip archive rpm!... "
@@ -79,3 +78,5 @@ mkdir ~/.config
 mkdir ~/.cache
 mkdir ~/.local
 chmod -R g+rw ~/.config ~/.cache ~/.local ~/.npm ~/.npm-global
+
+echo "==> Execution status: $?"
